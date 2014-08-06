@@ -1,0 +1,18 @@
+{
+    "name": "wScratchPad",
+    "comName":"WScratchPad",
+    "version": "1.0",
+    "desc": "刮刮乐~",
+    "tag":"刮刮乐,sWcratchPad",
+    "githubName":"noyobo",
+    "author": {
+        "name": "宝码",
+        "email": "nongyoubao@alibaba-inc.com",
+        "page": ""
+    },
+    "cover": "http://gtms03.alicdn.com/tps/i3/TB1OzJ4FVXXXXbuXXXXodoSTpXX-305-160.png",
+	"flexComboPort":"8081",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
