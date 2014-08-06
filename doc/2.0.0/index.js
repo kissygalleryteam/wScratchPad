@@ -1,15 +1,9 @@
-/*
-combined files : 
-
-kg/wScratchPad/2.0.0/index
-
-*/
 /**
  * @fileoverview
  * @author 宝码<nongyoubao@alibaba-inc.com>
  * @module wScratchPad
  **/
-KISSY.add('kg/wScratchPad/2.0.0/index',function(S, Node, Base, Event) {
+KISSY.add(function(S, Node, Base, Event) {
     'use strict';
     var EMPTY = '';
     var $ = Node.all;
@@ -287,4 +281,3 @@ KISSY.add('kg/wScratchPad/2.0.0/index',function(S, Node, Base, Event) {
 }, {
     requires: ['node', 'base', 'event']
 });
-
