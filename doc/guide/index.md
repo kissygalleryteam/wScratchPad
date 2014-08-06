@@ -1,6 +1,6 @@
 ## 综述
 
-wscratchpad是 Canvas 刮刮乐效果。
+WScratchPad是 Canvas 刮刮乐效果。
 
 * 版本：2.0.0
 * 作者：宝码
