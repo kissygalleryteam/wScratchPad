@@ -1,9 +1,9 @@
 {
-    "name": "wScratchPad",
-    "comName":"WScratchPad",
-    "version": "1.0",
+    "name": "wscratchpad",
+    "comName":"Wscratchpad",
+    "version": "2.0.0",
     "desc": "刮刮乐~",
-    "tag":"刮刮乐,sWcratchPad",
+    "tag":"刮刮乐,wscratchpad",
     "githubName":"noyobo",
     "author": {
         "name": "宝码",

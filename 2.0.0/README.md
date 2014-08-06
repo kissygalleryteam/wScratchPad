@@ -1,8 +1,8 @@
 ## wScratchPad
 
-* 版本：1.0
-* 教程：[http://gallery.kissyui.com/wScratchPad/1.0/guide/index.html](http://gallery.kissyui.com/wScratchPad/1.0/guide/index.html)
-* demo：[http://gallery.kissyui.com/wScratchPad/1.0/demo/index.html](http://gallery.kissyui.com/wScratchPad/1.0/demo/index.html)
+* 版本：2.0.0
+* 教程：[http://gallery.kissyui.com/wScratchPad/doc/guide/index.html](http://gallery.kissyui.com/wScratchPad/doc/guide/index.html)
+* demo：[http://gallery.kissyui.com/wScratchPad/doc/demo/index.html](http://gallery.kissyui.com/wScratchPad/doc/demo/index.html)
 
 ## changelog
 

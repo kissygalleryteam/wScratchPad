@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                         path: '../'
                     }
                 ],
-                map: [["<%= pkg.name %>/", "gallery/<%= pkg.name %>/"]]
+                map: [["<%= pkg.name %>/", "kg/<%= pkg.name %>/"]]
             },
             main: {
                 files: [
@@ -68,41 +68,6 @@ module.exports = function(grunt) {
                 ]
             }
         },
-		// FlexCombo服务配置
-		// https://npmjs.org/package/grunt-flexcombo
-		flexcombo:{
-			// https://speakerdeck.com/lijing00333/grunt-flexcombo
-			debug:{
-				options:{
-					proxyport:"<%= pkg.reserveServerPort %>",
-					target:'<%= pkg.version %>/build/',
-					urls:'/s/kissy/gallery/<%= pkg.name %>/<%= pkg.version %>',
-					port:"<%= pkg.flexComboPort %>",
-					servlet:'?',
-					separator:',',
-					charset:'gbk', // 输出文件的编码
-					// 默认将"-min"文件映射到源文件
-					filter:{
-						'-min\\.js':'.js'
-					}
-				}
-			},
-            demo:{
-                options:{
-					proxyport:"<%= pkg.reserveServerPort %>",
-                    target:'<%= pkg.version %>/',
-                    urls:'/s/kissy/gallery/<%= pkg.name %>/<%= pkg.version %>',
-					port:"<%= pkg.flexComboPort %>",
-                    proxyHosts:['demo'],
-                    servlet:'?',
-                    separator:',',
-                    charset:'gbk', 
-                    filter:{
-                        '-min\\.js':'.js'
-                    }
-                }
-            }
-		},
         less: {
             options: {
                 paths: './'
@@ -113,7 +78,7 @@ module.exports = function(grunt) {
                         expand: true,
 						cwd:'<%= pkg.version %>/',
                         src: ['**/*.less',
-							'!build/**/*.less',   
+							'!build/**/*.less',
 							'!demo/**/*.less'],
                         dest: '<%= pkg.version %>/build/',
                         ext: '.less.css'
@@ -127,7 +92,7 @@ module.exports = function(grunt) {
         			expand: true,
 					cwd:'<%= pkg.version %>/',
 					src: ['**/*.scss',
-						'!build/**/*.scss',   
+						'!build/**/*.scss',
 						'!demo/**/*.scss'],
 					dest: '<%= pkg.version %>/build/',
         			ext: '.scss.css'
@@ -145,12 +110,27 @@ module.exports = function(grunt) {
 							'**/*.css',
 							'!build/**/*.css',
 							'!demo/**/*.css'
-						], 
-						dest: '<%= pkg.version %>/build/', 
+						],
+						dest: '<%= pkg.version %>/build/',
 						filter: 'isFile'
 					}
 				]
-			}
+			},
+            pub : {
+                files: [
+                    {
+                        expand:true,
+                        cwd:'<%= pkg.version %>/',
+                        src: [
+                            'build/**/*',
+                            'demo/**/*',
+                            'guide/**/*'
+                        ],
+                        dest: './',
+                        filter: 'isFile'
+                    }
+                ]
+            }
 		},
 		// 监听JS、CSS、LESS文件的修改
         watch: {
@@ -207,14 +187,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-flexcombo');
     grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-sass');
-	
+
 
 
 	grunt.registerTask('build', '默认构建任务', function() {
-		task.run(['clean:build', 'kmc','uglify', 'copy','less','sass','cssmin']);
+		task.run(['clean:build', 'kmc','uglify', 'copy:main','less','sass','cssmin', 'copy:pub']);
 	});
 
 	// 启动Debug调试时的本地服务：grunt debug
