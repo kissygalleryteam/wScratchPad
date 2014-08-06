@@ -42,10 +42,10 @@
     <h2>WScratchPad的demo</h2>
     <div id="demo1" class="scratchpad"></div>
     <div id="demo1-percent">已擦除:0%</div>
-    <input type="button" value="Render" onclick="wScratchPad.render();" />
-    <input type="button" value="Clear" onclick="wScratchPad.clear()" />
-    <input type="button" value="Enable" onclick="wScratchPad.enable(true);" />
-    <input type="button" value="Disable" onclick="wScratchPad.enable(false);" />
+    <input type="button" value="Render" onclick="wscratchpad.render();" />
+    <input type="button" value="Clear" onclick="wscratchpad.clear()" />
+    <input type="button" value="Enable" onclick="wscratchpad.enable(true);" />
+    <input type="button" value="Disable" onclick="wscratchpad.enable(false);" />
     <div id="log"></div>
     <script>
     var S = KISSY;
@@ -64,7 +64,7 @@
         S.config({
             debug: debug,
             packages: [{
-                name: "kg/wScratchPad/2.0.0",
+                name: "kg/wscratchpad/2.0.0",
                 path: srcPath,
                 charset: "utf-8",
                 ignorePackageNameInUri: true
@@ -73,8 +73,8 @@
 
     }
 
-    S.use('kg/wScratchPad/2.0.0/index', function(S, WScratchPad) {
-        var wScratchPad = window.wScratchPad = new WScratchPad({
+    S.use('kg/wscratchpad/2.0.0/index', function(S, WScratchPad) {
+        var wscratchpad = window.wscratchpad = new WScratchPad({
             'srcNode': '#demo1',
             'size': 20,
             'realtime': true,
@@ -83,19 +83,19 @@
             'cursor': 'url("img/coin.png") 5 5, default'
         });
 
-        wScratchPad.on('down', function() {
+        wscratchpad.on('down', function() {
             S.log('按下橡皮檫');
         })
 
-        wScratchPad.on('move', function(event) {
+        wscratchpad.on('move', function(event) {
             S.log('移动橡皮檫');
         })
 
-        wScratchPad.on('up', function(event) {
+        wscratchpad.on('up', function(event) {
             S.log('弹起橡皮檫');
         })
 
-        wScratchPad.on('afterEraserChange', function(event) {
+        wscratchpad.on('afterEraserChange', function(event) {
             S.Node.all('#demo1-percent').html('已擦除:' + parseFloat(event.newVal).toFixed(2) + '%')
         })
     })

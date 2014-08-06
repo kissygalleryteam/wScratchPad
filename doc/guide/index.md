@@ -1,17 +1,17 @@
 ## 综述
 
-WScratchPad是 Canvas 刮刮乐效果。
+wscratchpad是 Canvas 刮刮乐效果。
 
 * 版本：2.0.0
 * 作者：宝码
-* demo：[http://gallery.kissyui.com/wScratchPad/doc/demo/index.html](http://gallery.kissyui.com/wScratchPad/doc/demo/index.html)
+* demo：[http://gallery.kissyui.com/wscratchpad/doc/demo/index.html](http://gallery.kissyui.com/wscratchpad/doc/demo/index.html)
 
 > 仅用于 支持 `canvas` 的浏览器
 
 ## 初始化组件
 
-    S.use('kg/wScratchPad/2.0.0/index', function (S, WScratchPad) {
-         var wScratchPad = new WScratchPad({
+    S.use('kg/wscratchpad/2.0.0/index', function (S, WScratchPad) {
+         var wscratchpad = new WScratchPad({
              'srcNode': '#div',
              'realtime' : false, // 实时修改 橡皮檫清除百分比,
              'size' : 5, // 橡皮檫 宽度
@@ -20,7 +20,7 @@ WScratchPad是 Canvas 刮刮乐效果。
              'cursor': 'crosshair' // 橡皮檫样式(指针)
          });
 
-        wScratchPad.on('afterEraserChange', function(event){
+        wscratchpad.on('afterEraserChange', function(event){
             console.log("已擦除 " + event.newVal + "% 的区域")
         })
     });
@@ -43,7 +43,7 @@ WScratchPad是 Canvas 刮刮乐效果。
 
 *render()*
 
-绘制 wScratchPad 组件
+绘制 wscratchpad 组件
 
 *clear()*
 

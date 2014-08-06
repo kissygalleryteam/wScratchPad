@@ -1,3 +1,3 @@
 config({
-    'gallery/wScratchPad/index': {alias: ['gallery/wScratchPad/1.0/index']}
+    'gallery/wscratchpad/index': {alias: ['gallery/wscratchpad/1.0/index']}
 });

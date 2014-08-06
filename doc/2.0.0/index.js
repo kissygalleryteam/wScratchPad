@@ -1,7 +1,7 @@
 /**
  * @fileoverview
  * @author 宝码<nongyoubao@alibaba-inc.com>
- * @module wScratchPad
+ * @module wscratchpad
  **/
 KISSY.add(function(S, Node, Base, Event) {
     'use strict';

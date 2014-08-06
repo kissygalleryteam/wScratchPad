@@ -1,3 +1,3 @@
 config({
-    'gallery/wScratchPad/index': {requires: ['node','base']}
+    'gallery/wscratchpad/index': {requires: ['node','base']}
 });

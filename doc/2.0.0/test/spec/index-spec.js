@@ -1,10 +1,10 @@
 KISSY.add(function (S, Node,Demo) {
     var $ = Node.all;
-    describe('wScratchPad', function () {
+    describe('wscratchpad', function () {
         it('Instantiation of components',function(){
             var demo = new Demo();
             expect(S.isObject(demo)).toBe(true);
         })
     });
 
-},{requires:['node','gallery/wScratchPad/1.0/']});
+},{requires:['node','gallery/wscratchpad/1.0/']});
