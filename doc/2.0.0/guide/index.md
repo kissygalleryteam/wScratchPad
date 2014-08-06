@@ -60,7 +60,7 @@ WScratchPad是 Canvas 刮刮乐效果。
 
 橡皮檫按下
 
-*mov*
+*move*
 
 移动橡皮檫, 当 **realtime** true 时, 实时更新 **eraser**
 
