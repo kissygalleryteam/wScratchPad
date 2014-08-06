@@ -4,7 +4,7 @@ WScratchPad是 Canvas 刮刮乐效果。
 
 * 版本：2.0.0
 * 作者：宝码
-* demo：[http://gallery.kissyui.com/wscratchpad/doc/demo/index.html](http://gallery.kissyui.com/wscratchpad/doc/demo/index.html)
+* demo：[http://gallery.kissyui.com/wScratchPad/doc/demo/index.html](http://gallery.kissyui.com/wScratchPad/doc/demo/index.html)
 
 > 仅用于 支持 `canvas` 的浏览器
 
