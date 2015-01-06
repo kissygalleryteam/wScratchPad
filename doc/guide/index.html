@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>wScratchPad</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">wScratchPad</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/noyobo" target="_blank" data-name="宝码" class="author"><img src="https://avatars.githubusercontent.com/u/1292082?v=2&amp;s=60" alt="宝码"></a><span class="author-name">宝码</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/wScratchPad" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="wScratchPad" class="J_View">1428</span></p>
+          <p class="com-info"><span class="info-label">所属分类</span><a href="http://kpm.taobao.net/list/游戏&amp;抽奖">游戏&amp;抽奖</a>
+          </p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><h2 id="-">综述</h2>
+<p>WScratchPad是 Canvas 刮刮乐效果。</p>
+<ul>
+<li>版本：2.0.0</li>
+<li>作者：宝码</li>
+<li>demo：<a href="http://gallery.kissyui.com/wScratchPad/doc/demo/index.html">http://gallery.kissyui.com/wScratchPad/doc/demo/index.html</a></li>
+</ul>
+<blockquote>
+<p>仅用于 支持 <code>canvas</code> 的浏览器</p>
+</blockquote>
+<h2 id="-">初始化组件</h2>
+<pre><code>S.use(&#39;kg/wscratchpad/2.0.0/index&#39;, function (S, WScratchPad) {
+     var wscratchpad = new WScratchPad({
+         &#39;srcNode&#39;: &#39;#div&#39;,
+         &#39;realtime&#39; : false, // 实时修改 橡皮檫清除百分比,
+         &#39;size&#39; : 5, // 橡皮檫 宽度
+         &#39;bg&#39; : &#39;#cacaca&#39;, // 背景内容
+         &#39;fg&#39; : &#39;#6699ff&#39;, // 覆盖内容
+         &#39;cursor&#39;: &#39;crosshair&#39; // 橡皮檫样式(指针)
+     });
+
+    wscratchpad.on(&#39;afterEraserChange&#39;, function(event){
+        console.log(&quot;已擦除 &quot; + event.newVal + &quot;% 的区域&quot;)
+    })
+});
+</code></pre><h2 id="-">默认属性</h2>
+<pre><code>{
+     &#39;srcNode&#39;: &#39;&#39;, // 初始化 必填属性
+     &#39;realtime&#39; : false, // 实时修改 橡皮檫清除百分比,
+     &#39;size&#39; : 5, // 橡皮檫 宽度
+     &#39;bg&#39; : &#39;#cacaca&#39;, // 背景内容
+     &#39;fg&#39; : &#39;#6699ff&#39;, // 覆盖内容
+     &#39;cursor&#39;: &#39;crosshair&#39;, // 指针样式
+     &#39;eraser&#39; : 0 // 已刮擦区域 半分比  0~100, 不能设置
+ }
+</code></pre><h2 id="api-">API说明</h2>
+<blockquote>
+<p>继承 <code>KISSY.Base</code></p>
+</blockquote>
+<p><em>render()</em></p>
+<p>绘制 wscratchpad 组件</p>
+<p><em>clear()</em></p>
+<p>清楚 Canvas 覆盖层</p>
+<p><em>enable(Boolean)</em></p>
+<p>设置是否可刮擦</p>
+<h2 id="-">响应事件</h2>
+<p><em>down</em></p>
+<p>橡皮檫按下</p>
+<p><em>move</em></p>
+<p>移动橡皮檫, 当 <strong>realtime</strong> true 时, 实时更新 <strong>eraser</strong></p>
+<p><em>up</em></p>
+<p>橡皮檫弹起, 同时更新 <strong>eraser</strong></p>
+
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
